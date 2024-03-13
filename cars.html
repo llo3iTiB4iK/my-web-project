@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Перелік авто</title>
     <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="auto_list_page">
 <header>
     <h1>
         <img src="img/icon.png" alt="logo image" width="40px"> RivneRent - сервіс оренди автомобілів у м.Рівне
@@ -15,7 +16,7 @@
     </h1>
     <nav>
         <a href="index.html">Головна</a>
-        <a href="#">Перелік авто</a>
+        <a href="#" id="link_to_current_page">Перелік авто</a>
         <a href="rules.html">Правила та умови</a>
         <a href="about_us.html">Про нас</a>
         <span>09:00-21:00</span>
@@ -23,7 +24,7 @@
 </header>
 <main>
     <h2>Ми пропонуємо до оренди наступні автомобілі:</h2>
-    <table>
+    <table id="filters">
         <tr>
             <td>Всі авто</td>
             <td>Бюджетні</td>
@@ -36,9 +37,9 @@
     </table>
     <ul>
         <li>
-            <p>Марка Модель (Рік)</p>
+            <h3>Марка Модель (Рік)</h3>
             <img src="https://www.linearity.io/blog/content/images/2023/06/how-to-create-a-car-NewBlogCover.png"
-                 alt="sample car image" width="50%">
+                 alt="sample car image" width="50%" class="shadowed">
             <div>
                 <table>
                     <tbody>
