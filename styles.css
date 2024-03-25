@@ -34,15 +34,28 @@ header h1 {
     margin:0;
     padding: 10px;
 }
+#log_in, #log_out {
+    position: absolute;
+    right: 20px;
+}
 nav {
-    padding:10px;
+    padding:5px;
     background-color: rgba(0,0,0,0.7);
     color:white;
     margin-bottom: 10px;
     font: 24px "Courier New", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
 }
 nav a {
+    padding: 5px;
     color: white;
+}
+#schedule {
+    position: absolute;
+    right: 20px;
 }
 main {
     font: 18px "Trebuchet MS", serif;
@@ -72,15 +85,78 @@ footer p {
     background-color: #257929;
 }
 #filters {
-    margin: 0 auto 50px;
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 75%;
-    background-color: white;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 }
-#filters td {
+#filters p {
     border: 1px solid black;
-    padding: 10px;
+    padding: 15px;
+    background-color: white;
+    margin: -1px;
+    flex: 1;
+    max-width: 10%;
+}
+#auto_list {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+#auto_list .car_specs {
+    display: flex;
+    gap: 2%;
+    border-bottom: 2px solid black;
+    align-items: flex-start;
+}
+#auto_list img {
+    margin-bottom: 0;
+}
+#auto_list .reversed {
+    flex-direction: row-reverse;
+}
+.car_specs > div {
+    width: 38%;
+}
+.tech_specs {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tech_specs > div {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F2F9D5;
+    padding-top: 10px;
+    border: 2px solid #FAFF00;
+}
+.tech_specs img {
+    margin: 0 auto;
+}
+.prices {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.prices > .row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFF500;
+}
+.prices > .row:first-child {
+    background-color: #3918FF;
+    color: white;
+}
+.prices > .row > div {
+    width: 15%;
+    border: 1px solid black;
+    padding: 10px 0;
+}
+.prices > .row > div.row_first_last {
+    width: 20%;
 }
 img.shadowed {
     border:.5px solid;
@@ -93,12 +169,14 @@ img.shadowed {
     padding:.5% 2% .5% 3%;
 }
 #price_includes {
-    margin: 50px auto 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 10%;
 }
-#price_includes td {
+#price_includes > div {
     padding: 0 15px;
 }
-#price_includes td:first-child {
+#price_includes > div:first-child {
     width: 55%;
 }
 #price_includes ul{
@@ -138,4 +216,51 @@ img.shadowed {
     color: white;
     font-size: larger;
     border-radius: 10px;
+}
+#contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    gap: 20px;
+}
+#contacts > * {
+    width: 600px;
+}
+#contacts a:link {
+    color: black;
+    display: block;
+    margin-bottom: 20px;
+}
+.car_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.make_model_year {
+    width: 50%;
+}
+.category {
+    background-color: black;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+.search-container input[type=text] {
+    padding: 6px;
+    font-size: 20px;
+    border: 2px solid rgb(39, 121, 255);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.search-container button {
+    padding: 6px 10px;
+    margin-left: -6px;
+    background: rgb(39, 121, 255);
+    color: white;
+    font-size: 20px;
+    border: 2px solid rgb(39, 121, 255);
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

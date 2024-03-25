@@ -7,12 +7,13 @@
     <title>Адміністрування</title>
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="admin_page">
 <header>
     <h1>
         <img src="img/icon.png" alt="logo image" width="40px"> RivneRent - сервіс оренди автомобілів у м.Рівне
-        <a href="index.html"><img src="img/logout.png" alt="logout icon" width="40px"></a>
+        <a href="index.html" id="log_out"><img src="img/logout.png" alt="logout icon" width="40px"></a>
     </h1>
     <nav>
         <a href="index.html">Головна</a>
@@ -22,72 +23,127 @@
     </nav>
 </header>
 <main>
-    <div>
-        <label for="search"><img src="img/search.svg" alt="search icon" height="17.6px"></label>
-        <input type="text" id="search" placeholder="Введіть марку/модель/рік">
+    <div class="search-container">
+        <label>
+            <input type="text" placeholder="Введіть марку/модель/рік">
+        </label>
+        <button type="button"><i class="fa fa-search"></i></button>
     </div>
-    <ul>
+    <ul id="auto_list">
         <li>
-            <h3>Марка Модель (Рік)</h3>
-            <p>Категорія авто</p>
-            <img src="img/edit.svg" alt="edit icon" height="40px">
-            <img src="img/delete.svg" alt="delete icon" height="40px">
-            <br>
-            <img src="https://www.linearity.io/blog/content/images/2023/06/how-to-create-a-car-NewBlogCover.png"
-                 alt="sample car image" width="50%" class="shadowed">
-            <div>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <img src="img/engine.svg" alt="engine icon">
+            <div class="car_heading">
+                <h3 class="make_model_year">Марка Модель (Рік)</h3>
+                <p class="category">Категорія авто</p>
+                <img src="img/edit.svg" alt="edit icon" height="40px">
+                <img src="img/delete.svg" alt="delete icon" height="40px">
+            </div>
+            <div class="car_specs">
+                <img src="https://www.linearity.io/blog/content/images/2023/06/how-to-create-a-car-NewBlogCover.png"
+                     alt="sample car image" width="60%" class="shadowed">
+                <div>
+                    <div class="tech_specs">
+                        <div>
+                            <img src="img/engine.svg" alt="engine icon" width="145px">
                             <p>x л</p>
-                        </td>
-                        <td>
-                            <img src="img/fuel.svg" alt="fuel icon">
+                        </div>
+                        <div>
+                            <img src="img/fuel.svg" alt="fuel icon" width="120px">
                             <p>тип пального</p>
-                        </td>
-                        <td>
-                            <img src="img/transmission.svg" alt="transmission icon">
+                        </div>
+                        <div>
+                            <img src="img/transmission.svg" alt="transmission icon" width="110px" height="120px">
                             <p>тип кпп</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/passenger.svg" alt="passenger icon">
+                        </div>
+                        <div>
+                            <img src="img/passenger.svg" alt="passenger icon" width="120px">
                             <p>x людей</p>
-                        </td>
-                        <td>
-                            <img src="img/conditioner.svg" alt="conditioner icon">
+                        </div>
+                        <div>
+                            <img src="img/conditioner.svg" alt="conditioner icon" width="140px">
                             <p>тип кондиціонера</p>
-                        </td>
-                        <td>
-                            <img src="img/fuel consumption.svg" alt="fuel consumption icon">
+                        </div>
+                        <div>
+                            <img src="img/fuel consumption.svg" alt="fuel consumption icon" width="125px">
                             <p>x л/100км</p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>Період</td>
-                        <td>1-3 діб</td>
-                        <td>4-9 діб</td>
-                        <td>10-25 діб</td>
-                        <td>26-89 діб</td>
-                        <td>Завдаток</td>
-                    </tr>
-                    <tr>
-                        <td>Ціна за добу</td>
-                        <td>x грн</td>
-                        <td>x грн</td>
-                        <td>x грн</td>
-                        <td>x грн</td>
-                        <td>x грн</td>
-                    </tr>
-                    </tbody>
-                </table>
+                        </div>
+                    </div>
+                    <div class="prices">
+                        <div class="row">
+                            <div class="row_first_last">Період</div>
+                            <div>1-3 діб</div>
+                            <div>4-9 діб</div>
+                            <div>10-25 діб</div>
+                            <div>26-89 діб</div>
+                            <div class="row_first_last">Завдаток</div>
+                        </div>
+                        <div class="row">
+                            <div class="row_first_last">Ціна за добу</div>
+                            <div>x грн</div>
+                            <div>x грн</div>
+                            <div>x грн</div>
+                            <div>x грн</div>
+                            <div class="row_first_last">x грн</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="car_heading">
+                <h3 class="make_model_year">Марка Модель (Рік)</h3>
+                <p class="category">Категорія авто</p>
+                <img src="img/edit.svg" alt="edit icon" height="40px">
+                <img src="img/delete.svg" alt="delete icon" height="40px">
+            </div>
+            <div class="car_specs reversed">
+                <img src="https://www.linearity.io/blog/content/images/2023/06/how-to-create-a-car-NewBlogCover.png"
+                     alt="sample car image" width="60%" class="shadowed">
+                <div>
+                    <div class="tech_specs">
+                        <div>
+                            <img src="img/engine.svg" alt="engine icon" width="145px">
+                            <p>x л</p>
+                        </div>
+                        <div>
+                            <img src="img/fuel.svg" alt="fuel icon" width="120px">
+                            <p>тип пального</p>
+                        </div>
+                        <div>
+                            <img src="img/transmission.svg" alt="transmission icon" width="110px" height="120px">
+                            <p>тип кпп</p>
+                        </div>
+                        <div>
+                            <img src="img/passenger.svg" alt="passenger icon" width="120px">
+                            <p>x людей</p>
+                        </div>
+                        <div>
+                            <img src="img/conditioner.svg" alt="conditioner icon" width="140px">
+                            <p>тип кондиціонера</p>
+                        </div>
+                        <div>
+                            <img src="img/fuel consumption.svg" alt="fuel consumption icon" width="125px">
+                            <p>x л/100км</p>
+                        </div>
+                    </div>
+                    <div class="prices">
+                        <div class="row">
+                            <div class="row_first_last">Період</div>
+                            <div>1-3 діб</div>
+                            <div>4-9 діб</div>
+                            <div>10-25 діб</div>
+                            <div>26-89 діб</div>
+                            <div class="row_first_last">Завдаток</div>
+                        </div>
+                        <div class="row">
+                            <div class="row_first_last">Ціна за добу</div>
+                            <div>x грн</div>
+                            <div>x грн</div>
+                            <div>x грн</div>
+                            <div>x грн</div>
+                            <div class="row_first_last">x грн</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </li>
     </ul>
