@@ -7,12 +7,15 @@
     <title>Правила та умови</title>
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="rules_page">
 <header>
     <h1>
-        <img src="img/icon.png" alt="logo image" width="40px"> RivneRent - сервіс оренди автомобілів у м.Рівне
-        <a href="login.html" id="log_in"><img src="img/login.png" alt="login icon" width="40px"></a>
+        <img src="img/icon.png" alt="logo image" width="40px" class="icon">
+        <span> RivneRent - сервіс оренди автомобілів у м.Рівне</span>
+        <a href="login.html" id="log_in"><img src="img/login.png" alt="login icon" width="40px" class="icon"></a>
+        <a id="menu_icon"><i class="fa fa-bars"></i></a>
     </h1>
     <nav>
         <a href="index.html">Головна</a>
@@ -20,10 +23,11 @@
         <a href="#" id="link_to_current_page">Правила та умови</a>
         <a href="about_us.html">Про нас</a>
         <span id="schedule">09:00-21:00</span>
+        <a href="login.html" id="login_link">Вхід</a>
     </nav>
 </header>
 <main>
-    <div><img src="img/rules_n_terms.jpg" alt="rules agreement image" class="shadowed" width="60%"></div>
+    <div><img src="img/rules_n_terms.jpg" alt="rules agreement image" class="shadowed fg_image" width="60%"></div>
     <p>
         <b>Правила та умови оренди автомобілів є важливою частиною нашого сайту. Перед тим, як здійснити оренду, ми радимо уважно прочитати наступні правила та умови:</b>
     </p>
@@ -49,5 +53,6 @@
         Підтримка: <a href="mailto:lyalyaivan2004@gmail.com">lyalyaivan2004@gmail.com</a>
     </p>
 </footer>
+<script src="menu_toggle.js"></script>
 </body>
 </html>
