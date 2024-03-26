@@ -13,16 +13,16 @@ body {
     flex-direction: column;
 }
 #main_page {
-    background-image: url("img/bg1.jpeg");
+    background-image: url("img/backgrounds/bg1.jpeg");
 }
 #auto_list_page, #car_page, #login_page {
-    background-image: url("img/bg2.jpg");
+    background-image: url("img/backgrounds/bg2.jpg");
 }
 #rules_page {
     background-color: #f1e6c5;
 }
 #about_us_page, #admin_page {
-    background-image: url("img/bg3.jpg");
+    background-image: url("img/backgrounds/bg3.jpg");
 }
 header {
     position:sticky;
@@ -275,6 +275,18 @@ img.shadowed {
 #logout_link {
     display: none;
 }
+.fa-pencil-square-o, .fa-trash, .fa-sign-in, .fa-sign-out {
+    font-size: 40px;
+    color: black;
+}
+.fa-plus-circle {
+    font-size: 180px;
+    border-radius: 180px;
+    width: 180px;
+    background-color: black;
+    color: #04DC04;
+    border: 1px solid white;
+}
 @media screen and (min-width: 768px) and (max-width: 1279px){
     .fg_image {
         width: 80%;
@@ -340,8 +352,11 @@ img.shadowed {
         height: 60px;
         width: auto;
     }
-    #add_auto_icon {
-        margin-top: 30px;
+    .fa-plus-circle {
+        margin-top: 20px;
+        font-size: 150px;
+        border-radius: 150px;
+        width: 150px;
     }
     .search-container input[type=text] {
         font-size: 18px;
@@ -363,6 +378,9 @@ img.shadowed {
     }
     #price_includes > div {
         width: 50%;
+    }
+    .fa-pencil-square-o, .fa-trash {
+        font-size: 30px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -491,11 +509,13 @@ img.shadowed {
         height: 40px;
         width: auto;
     }
-    #add_auto_icon {
+    .fa-plus-circle {
         margin-top: 20px;
-        width: 130px;
+        font-size: 120px;
+        border-radius: 120px;
+        width: 120px;
     }
-    #add_auto_icon + h3 {
+    .fa-plus-circle + h3 {
         font-size: 16px;
     }
     .category {
@@ -529,5 +549,8 @@ img.shadowed {
     #price_includes li {
         font-size: 16px;
         line-height: 26px;
+    }
+    .fa-pencil-square-o, .fa-trash {
+        font-size: 25px;
     }
 }
