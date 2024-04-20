@@ -8,6 +8,7 @@
     <link rel="icon" href="static/img/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/styles.css">
+    <script src="static/menu_toggle.js"></script>
 </head>
 <body id="car_page">
 <header>
@@ -67,7 +68,7 @@
                             <div>4-9 діб</div>
                             <div>10-25 діб</div>
                             <div>26-89 діб</div>
-                            <div class="row_first_last">Завдаток <button>?</button></div>
+                            <div class="row_first_last">Завдаток <button class="question_button">?</button></div>
                         </div>
                         <div class="row">
                             <div class="row_first_last">Ціна за добу</div>
@@ -107,6 +108,10 @@
         Підтримка: <a href="mailto:lyalyaivan2004@gmail.com">lyalyaivan2004@gmail.com</a>
     </p>
 </footer>
-<script src="static/menu_toggle.js"></script>
+<script>
+    document.querySelector(".question_button").onclick = function() {
+        window.alert('* На час дії договору про оренду необхідно внести відповідну заставу, яка буде повернена клієнтові в 100% обсязі, якщо умови договору не були порушені.');
+    }
+</script>
 </body>
 </html>

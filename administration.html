@@ -8,6 +8,7 @@
     <link rel="icon" href="static/img/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/styles.css">
+    <script src="static/menu_toggle.js"></script>
 </head>
 <body id="admin_page">
 <header>
@@ -29,7 +30,7 @@
 <main>
     <div class="search-container">
         <label>
-            <input type="text" placeholder="Введіть марку/модель/рік">
+            <input type="text" placeholder="Введіть марку/модель/рік" oninput="filterCars(this.value)">
         </label>
         <button type="button"><i class="fa fa-search"></i></button>
     </div>
@@ -162,6 +163,14 @@
         Підтримка: <a href="mailto:lyalyaivan2004@gmail.com">lyalyaivan2004@gmail.com</a>
     </p>
 </footer>
-<script src="static/menu_toggle.js"></script>
+<script>
+    function filterCars(queryText) {
+        document.querySelectorAll('#auto_list>li').forEach(car => {
+            let car_title = car.querySelector('h3').textContent;
+            const to_show = car_title.includes(queryText) || car_title.toLowerCase().includes(queryText);
+            car.hidden = !to_show;
+        })
+    }
+</script>
 </body>
 </html>
